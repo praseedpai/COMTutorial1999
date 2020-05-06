@@ -1,0 +1,11 @@
+; dllserver01.def : Declares the module parameters for the DLL.
+
+LIBRARY      "dllserver01"
+DESCRIPTION  'dllserver01 Windows Dynamic Link Library'
+
+EXPORTS
+    DllRegisterServer    @1	PRIVATE
+   DllUnregisterServer  @2	PRIVATE
+   DllGetClassObject    @3	PRIVATE
+   DllCanUnloadNow		@4	PRIVATE
+

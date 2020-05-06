@@ -1,0 +1,12 @@
+; dllserver.def : Declares the module parameters for the DLL.
+
+LIBRARY      "dllserver"
+DESCRIPTION  'dllserver Windows Dynamic Link Library'
+
+EXPORTS
+    ; Explicit exports can go here
+DllRegisterServer    @1	PRIVATE
+   DllUnregisterServer  @2	PRIVATE
+   DllGetClassObject    @3	PRIVATE
+   DllCanUnloadNow		@4	PRIVATE
+ 

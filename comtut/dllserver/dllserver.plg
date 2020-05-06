@@ -1,0 +1,63 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: dllserver - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\TEMP\RSP9E.tmp" with contents
+[
+/nologo /Gz /Zp4 /MTd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_WINDLL" /D "_MBCS" /D "_USRDLL" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"E:\comtut\dllserver\Addressobject_i.c"
+"E:\comtut\dllserver\dllserver.cpp"
+"E:\comtut\dllserver\dllspec.cpp"
+"E:\comtut\dllserver\objimpl.cpp"
+]
+Creating command line "cl.exe @C:\TEMP\RSP9E.tmp" 
+Creating temporary file "C:\TEMP\RSP9F.tmp" with contents
+[
+/nologo /Gz /Zp4 /MTd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_WINDLL" /D "_MBCS" /D "_USRDLL" /Fp"Debug/dllserver.pch" /Yc"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"E:\comtut\dllserver\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\TEMP\RSP9F.tmp" 
+Creating temporary file "C:\TEMP\RSPA0.tmp" with contents
+[
+/nologo /subsystem:windows /dll /incremental:yes /pdb:"Debug/dllserver.pdb" /debug /machine:I386 /def:".\dllserver.def" /out:"Debug/dllserver.dll" /implib:"Debug/dllserver.lib" /pdbtype:sept 
+.\Debug\Addressobject_i.obj
+.\Debug\dllserver.obj
+.\Debug\dllspec.obj
+.\Debug\objimpl.obj
+.\Debug\StdAfx.obj
+.\Debug\dllserver.res
+]
+Creating command line "link.exe @C:\TEMP\RSPA0.tmp"
+<h3>Output Window</h3>
+Compiling...
+StdAfx.cpp
+Compiling...
+Addressobject_i.c
+Generating Code...
+Compiling...
+dllserver.cpp
+dllspec.cpp
+objimpl.cpp
+Generating Code...
+Linking...
+nafxcwd.lib(dllmodul.obj) : error LNK2005: _DllMain@12 already defined in LIBCMTD.lib(dllmain.obj)
+nafxcwd.lib(afxmem.obj) : error LNK2005: "void * __cdecl operator new(unsigned int)" (??2@YAPAXI@Z) already defined in LIBCMTD.lib(new.obj)
+nafxcwd.lib(afxmem.obj) : error LNK2005: "void __cdecl operator delete(void *)" (??3@YAXPAX@Z) already defined in LIBCMTD.lib(dbgdel.obj)
+nafxcwd.lib(dllmodul.obj) : warning LNK4006: _DllMain@12 already defined in LIBCMTD.lib(dllmain.obj); second definition ignored
+nafxcwd.lib(afxmem.obj) : warning LNK4006: "void * __cdecl operator new(unsigned int)" (??2@YAPAXI@Z) already defined in LIBCMTD.lib(new.obj); second definition ignored
+nafxcwd.lib(afxmem.obj) : warning LNK4006: "void __cdecl operator delete(void *)" (??3@YAXPAX@Z) already defined in LIBCMTD.lib(dbgdel.obj); second definition ignored
+   Creating library Debug/dllserver.lib and object Debug/dllserver.exp
+Debug/dllserver.dll : fatal error LNK1169: one or more multiply defined symbols found
+Error executing link.exe.
+
+
+
+<h3>Results</h3>
+dllserver.dll - 4 error(s), 3 warning(s)
+</pre>
+</body>
+</html>

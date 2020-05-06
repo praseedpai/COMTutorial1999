@@ -1,0 +1,38 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: dllserver01 - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\TEMP\RSP97.tmp" with contents
+[
+/nologo /subsystem:windows /dll /incremental:no /pdb:"Release/dllserver01.pdb" /machine:I386 /def:".\dllserver01.def" /out:"Release/dllserver01.dll" /implib:"Release/dllserver01.lib" 
+.\Release\Addressobject_i.obj
+.\Release\dllserver01.obj
+.\Release\dllspec.obj
+.\Release\objimpl.obj
+.\Release\StdAfx.obj
+.\Release\dllserver01.res
+]
+Creating command line "link.exe @C:\TEMP\RSP97.tmp"
+<h3>Output Window</h3>
+Linking...
+nafxcw.lib(dllmodul.obj) : error LNK2005: _DllMain@12 already defined in LIBCMT.lib(dllmain.obj)
+nafxcw.lib(afxmem.obj) : error LNK2005: "void * __cdecl operator new(unsigned int)" (??2@YAPAXI@Z) already defined in LIBCMT.lib(new.obj)
+nafxcw.lib(afxmem.obj) : error LNK2005: "void __cdecl operator delete(void *)" (??3@YAXPAX@Z) already defined in LIBCMT.lib(delete.obj)
+nafxcw.lib(dllmodul.obj) : warning LNK4006: _DllMain@12 already defined in LIBCMT.lib(dllmain.obj); second definition ignored
+nafxcw.lib(afxmem.obj) : warning LNK4006: "void * __cdecl operator new(unsigned int)" (??2@YAPAXI@Z) already defined in LIBCMT.lib(new.obj); second definition ignored
+nafxcw.lib(afxmem.obj) : warning LNK4006: "void __cdecl operator delete(void *)" (??3@YAXPAX@Z) already defined in LIBCMT.lib(delete.obj); second definition ignored
+   Creating library Release/dllserver01.lib and object Release/dllserver01.exp
+Release/dllserver01.dll : fatal error LNK1169: one or more multiply defined symbols found
+Error executing link.exe.
+
+
+
+<h3>Results</h3>
+dllserver01.dll - 4 error(s), 3 warning(s)
+</pre>
+</body>
+</html>

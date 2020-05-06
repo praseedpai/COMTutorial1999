@@ -1,0 +1,122 @@
+///////////////////////////
+//
+//IDL Script for IAddress and IAddresList interface 
+//  
+//{3BF36EF1-F3B3-11d2-A4E3-0040056DF87F}
+//{5664CF91-F3B3-11d2-A4E3-0040056DF87F}
+//{5664CF92-F3B3-11d2-A4E3-0040056DF87F}
+//{E49E4821-F3B3-11d2-A4E3-0040056DF87F}
+//{14EF50C1-F3BA-11d2-A4E3-0040056DF87F}
+
+
+//----- include defenition for iunknown interface
+import "unknwn.idl"; 
+
+
+//These are the attributes of the IAddress interface
+
+[
+	object,
+	uuid(3BF36EF1-F3B3-11d2-A4E3-0040056DF87F),
+	helpstring("IAddress  Interface.")
+]
+
+interface IAddress : IUnknown
+{
+	
+   [helpstring("Gets the name from object")]    
+   HRESULT GetName( [in,out] LPSTR  );
+   [helpstring("Sets the name from object")]    
+   HRESULT SetName([in] LPSTR  );
+   [helpstring("Gets the Address Line #1")]    
+   HRESULT GetAddress1([in,out] LPSTR   );
+   [helpstring("Gets the Address Line #1")]    
+   HRESULT SetAddress1([in] LPSTR   );
+   [helpstring("Gets the Address Line #2")]    
+   HRESULT GetAddress2([in,out] LPSTR   );
+   [helpstring("Gets the Address Line #2")]    
+   HRESULT SetAddress2([in] LPSTR   );
+   [helpstring("Gets the City")]    
+   HRESULT GetCity([in , out] LPSTR   );
+   [helpstring("Sets the City")]    
+   HRESULT SetCity( [in ] LPSTR   ); 
+   [helpstring("Gets the State")]    
+   HRESULT GetState( [in,out] LPSTR   );
+   [helpstring("Sets the State")]    
+   HRESULT SetState( [in] LPSTR   );
+   [helpstring("Gets the country")]    
+   HRESULT GetCountry( [in , out ]LPSTR );
+   [helpstring("Sets the Country")]    
+   HRESULT SetCountry( [in] LPSTR  ); 
+   [helpstring("Gets the pincode")]    
+   HRESULT GetPinCode( [in , out] LPSTR  );
+   [helpstring("Sets the Pincode")]    
+   HRESULT SetPinCode( [in] LPSTR  );
+   
+
+}
+
+
+//IID_IAddressList
+//These are the attributes of the IUserInfo interface
+[
+	object,
+	uuid(5664CF91-F3B3-11d2-A4E3-0040056DF87F),
+	helpstring("IAddressList Interface")
+]
+
+interface IAddressList : IUnknown
+{
+
+  HRESULT MoveFirst();
+  HRESULT MoveLast();
+  HRESULT MoveNext();
+  HRESULT MovePrevious();
+  HRESULT Eof();
+  HRESULT Bof();
+  HRESULT GetData([out]IAddress ** );
+  HRESULT Add(IAddress *);
+  HRESULT Write( [in] LPSTR  ); 
+  HRESULT Open(  [in] LPSTR );
+
+
+}
+
+
+//These are the attributes of the type library 
+[
+	uuid(5664CF92-F3B3-11d2-A4E3-0040056DF87F),
+	helpstring("obj_dll Type Library."),
+	version(1.0)
+]
+
+library Addressobject
+{
+
+	[
+		uuid(E49E4821-F3B3-11d2-A4E3-0040056DF87F),
+		helpstring("Address Object.")
+	]
+
+	coclass Address
+	{
+		//List all of the interfaces supported by the object
+		[default] interface IAddress;
+	}
+
+
+	[
+		uuid(14EF50C1-F3BA-11d2-A4E3-0040056DF87F),
+		helpstring("AddressList Object.")
+	]
+
+	coclass AddressList
+	{
+		//List all of the interfaces supported by the object
+		[default] interface IAddressList;
+	}
+
+
+}
+
+// EOF

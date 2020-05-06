@@ -1,0 +1,43 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: proxystub - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\TEMP\RSP37.tmp" with contents
+[
+/nologo /MTd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_MBCS" /D "_USRDLL" /D "PROXYSTUB_EXPORTS" /D "REGISTER_PROXY_DLL" /Fp"Debug/proxystub.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"E:\comtut\exeserver\addressobject_i.c"
+"E:\comtut\exeserver\addressobject_p.c"
+]
+Creating command line "cl.exe @C:\TEMP\RSP37.tmp" 
+Creating temporary file "C:\TEMP\RSP38.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /dll /incremental:yes /pdb:"Debug/proxystub.pdb" /debug /machine:I386 /def:".\proxystub.def" /out:"Debug/proxystub.dll" /implib:"Debug/proxystub.lib" /pdbtype:sept 
+.\Debug\addressobject_i.obj
+.\Debug\addressobject_p.obj
+]
+Creating command line "link.exe @C:\TEMP\RSP38.tmp"
+<h3>Output Window</h3>
+Compiling...
+addressobject_i.c
+addressobject_p.c
+Linking...
+proxystub.def : error LNK2001: unresolved external symbol DllCanUnloadNow
+proxystub.def : error LNK2001: unresolved external symbol DllGetClassObject
+proxystub.def : error LNK2001: unresolved external symbol DllRegisterServer
+proxystub.def : error LNK2001: unresolved external symbol DllUnregisterServer
+proxystub.def : error LNK2001: unresolved external symbol GetProxyDllInfo
+Debug/proxystub.lib : fatal error LNK1120: 5 unresolved externals
+LINK : fatal error LNK1141: failure during build of exports file
+Error executing link.exe.
+
+
+
+<h3>Results</h3>
+proxystub.dll - 7 error(s), 0 warning(s)
+</pre>
+</body>
+</html>
